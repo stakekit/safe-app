@@ -9,6 +9,7 @@ export const Widget = () => {
   return (
     <SKApp
       apiKey={config.apiKey}
+      isSafe
       theme={{
         ...darkTheme,
         color: {
