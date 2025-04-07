@@ -1,11 +1,7 @@
-import { useLayoutEffect, useState } from "react";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 export const useIsMobile = () => {
-	const [isMobile, setIsMobile] = useState(false);
+  const { width } = useWindowSize();
 
-	useLayoutEffect(() => {
-		setIsMobile(window.innerWidth < 520);
-	}, []);
-
-	return isMobile;
+  return width && width < 520;
 };
