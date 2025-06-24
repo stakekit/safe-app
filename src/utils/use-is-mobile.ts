@@ -1,7 +1,7 @@
 import { useWindowSize } from "@uidotdev/usehooks";
 
 export const useIsMobile = () => {
-  const { width } = useWindowSize();
+	const { width } = useWindowSize();
 
-  return width && width < 520;
+	return width && width < 520;
 };
