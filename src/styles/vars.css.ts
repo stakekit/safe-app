@@ -1,8 +1,8 @@
-import { createGlobalTheme } from "@vanilla-extract/css";
-import { colors } from "./tokens/colors";
-import { fonts } from "./tokens/fonts";
-import { radii } from "./tokens/radii";
-import { spaces } from "./tokens/space";
+import { createGlobalTheme } from "@vanilla-extract/css"
+import { colors } from "./tokens/colors"
+import { fonts } from "./tokens/fonts"
+import { radii } from "./tokens/radii"
+import { spaces } from "./tokens/space"
 import {
   fontSizes,
   fontWeights,
@@ -10,7 +10,7 @@ import {
   letterSpacings,
   lineHeights,
   texts,
-} from "./tokens/typography";
+} from "./tokens/typography"
 
 export const vars = createGlobalTheme(":root", {
   space: spaces,
@@ -23,4 +23,4 @@ export const vars = createGlobalTheme(":root", {
   letterSpacing: letterSpacings,
   heading: headings,
   text: texts,
-});
+})
