@@ -1,5 +1,5 @@
 export const config = {
-	apiKey: process.env.NEXT_PUBLIC_API_KEY ?? "",
-	mixPanelToken: process.env.NEXT_PUBLIC_MIX_PANEL_TOKEN ?? "",
-	enableReferralCheck: process.env.ENABLE_REFERRAL_CHECK === "true",
-} as const;
+  apiKey: import.meta.env.VITE_API_KEY ?? "",
+  mixPanelToken: import.meta.env.VITE_MIX_PANEL_TOKEN ?? "",
+  enableReferralCheck: import.meta.env.VITE_ENABLE_REFERRAL_CHECK === "true",
+} as const

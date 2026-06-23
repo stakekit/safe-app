@@ -1,10 +1,11 @@
-import { style } from "@vanilla-extract/css";
-import { atoms } from "../styles";
-import { minMediaQuery } from "../styles/tokens/breakpoints";
+import { style } from "@vanilla-extract/css"
+import { atoms } from "../styles"
+import { minMediaQuery } from "../styles/tokens/breakpoints"
 
 export const layoutContainer = style([
   atoms({ fontFamily: "body", background: "background" }),
-]);
+  { minHeight: "100vh" },
+])
 
 export const container = style({
   height: "100%",
@@ -12,11 +13,11 @@ export const container = style({
   flexDirection: "column",
   position: "relative",
   overflow: "hidden",
-});
+})
 
 export const links = style({
   cursor: "pointer",
-});
+})
 
 export const connectContainer = style({
   borderRadius: "110px",
@@ -27,11 +28,11 @@ export const connectContainer = style({
       padding: "15px 25px",
     },
   },
-});
+})
 
 export const dividerContainer = style({
   alignSelf: "stretch",
-});
+})
 
 export const logo = style({
   height: "60px",
@@ -44,4 +45,4 @@ export const logo = style({
       aspectRatio: "auto 160 / 80",
     },
   },
-});
+})

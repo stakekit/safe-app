@@ -1,18 +1,18 @@
-import { globalStyle } from "@vanilla-extract/css";
-import { maxMediaQuery } from "./tokens/breakpoints";
+import { globalStyle } from "@vanilla-extract/css"
+import { maxMediaQuery } from "./tokens/breakpoints"
 
 globalStyle("html, body", {
   margin: 0,
-});
+})
 
 globalStyle("body", {
   fontFamily: "var(--sk-font-garamond)",
   minHeight: "100vh",
-});
+})
 
 globalStyle("a", {
   textDecoration: "none",
-});
+})
 
 globalStyle("[data-rk='stakekit']", {
   "@media": {
@@ -20,8 +20,8 @@ globalStyle("[data-rk='stakekit']", {
       padding: "0 8px",
     },
   },
-});
+})
 
 globalStyle("[data-rk='stakekit'] > div:first-of-type", {
   borderRadius: "20px",
-});
+})

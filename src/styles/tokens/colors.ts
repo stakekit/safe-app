@@ -7,4 +7,4 @@ export const colors = {
   textMuted: "#999999",
 
   background: "#f4f4f4",
-};
+}

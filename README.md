@@ -1,57 +1,58 @@
-**This** is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# StakeKit Safe App
+
+The standalone StakeKit dApp, a [Vite](https://vite.dev/)-powered React SPA that
+embeds the `@stakekit/widget`.
+
+## Prerequisites
+
+Tool versions are pinned via [mise](https://mise.jdx.dev/). Install the toolchain
+(Node.js + pnpm) with:
+
+```bash
+mise install
+```
 
 ## Getting Started
 
-### Installation
-
-Use correct node version
+Install dependencies:
 
 ```bash
-nvm use
-```
-
-Install dependencies
-
-```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
 ```
 
-### Run development app
+Set up environment variables:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+cp .env.example .env
+```
+
+Run the development server:
+
+```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3002](http://localhost:3002) with your browser to see the
+result.
 
-### Run production app
+## Scripts
 
-Create production build
+- `pnpm dev` — Start the Vite development server on port 3002
+- `pnpm build` — Build the production bundle into `dist/`
+- `pnpm start` — Preview the production build locally
+- `pnpm lint` — Run Biome and TypeScript checks
+- `pnpm lint:fix` — Apply Biome lint/format fixes
+- `pnpm format` — Check Biome formatting
+- `pnpm format:fix` — Fix Biome formatting
 
-```bash
-npm run build
-# or
-yarn build
-# or
-pnpm build
-```
+## Environment variables
 
-Start the app
+| Variable                     | Description                          |
+| ---------------------------- | ------------------------------------ |
+| `VITE_API_KEY`               | StakeKit API key                     |
+| `VITE_MIX_PANEL_TOKEN`       | Mixpanel token (optional)            |
+| `VITE_ENABLE_REFERRAL_CHECK` | Enable referral check (`true`/unset) |
 
-```bash
-npm run start
-# or
-yarn start
-# or
-pnpm start
-```
+## Deployment
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app is a static Vite SPA deployed via AWS Amplify (see `amplify.yml`).

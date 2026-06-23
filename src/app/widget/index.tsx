@@ -1,9 +1,7 @@
-"use client";
-
-import "@stakekit/widget/style.css";
-import { SKApp, lightTheme } from "@stakekit/widget";
-import { config } from "../../config";
-import { tracking } from "../tracking";
+import "@stakekit/widget/style.css"
+import { lightTheme, SKApp } from "@stakekit/widget"
+import { config } from "../../config"
+import { tracking } from "../tracking"
 
 export const Widget = () => {
   return (
@@ -14,5 +12,5 @@ export const Widget = () => {
       tracking={tracking}
       referralCheck={config.enableReferralCheck}
     />
-  );
-};
+  )
+}
